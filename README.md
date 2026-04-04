@@ -19,15 +19,15 @@ markdown
 
 Copy code
 ```
-Audio (Wavelet+MFCC) ──→ AudioEncoder ──→ 128D
+Audio (Wavelet+MFCC)  → AudioEncoder 
          │
-Gesture ───────────────→ FDMMA (TCN+ATFM) ──→ 128D  
+Gesture   → FDMMA (TCN+ATFM) 
          │
-Posture ───────────────→ STABlock (PASA+PATA) ──→ 16D
+Posture   → STABlock (PASA+PATA) 
          │
          ↓ CrossModal Fusion (CMTPF)
          │
-        128D ──→ Classifier ──→ [Beginner/Intermediate/Advanced]
+          → Classifier  → [Beginner/Intermediate/Advanced]
 ```
 🚀 Quick Start
 1. Install Dependencies
