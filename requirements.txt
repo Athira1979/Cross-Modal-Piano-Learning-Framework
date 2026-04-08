@@ -1,1 +1,11 @@
 
+torch>=1.12.0
+torchvision
+torchaudio
+librosa==0.10.0
+mediapipe
+opencv-python
+numpy
+scipy
+pyaudio
+sounddevice
