@@ -112,10 +112,7 @@ python demo.py sim --duration 60
                               ↓
                  Cross-Modal & Fusion (CMTPF)
                               ↓
-                      RFP-Net (Feedback)
-                              ↓
-                 Personalized Feedback Output
-               [Beginner/Intermediate/Advanced]
+      RFP-Net (Feedback) [Beginner/Intermediate/Advanced]
 ```
 ## 🗂️ File Structure
 ```
@@ -137,7 +134,7 @@ Cross-Modal-Piano-Learning-Framework/
 │   ├── metrics.py             # Evaluation
 │   └── plot_metrics.py        # Visualization
 ├── LICENSE                    # LICENSE
-├── README.MD                  # Readme file
+├── README.md                  # Readme file
 ├── config.py                  # Hyperparams 
 ├── demo.py                    # Live/Web demos
 ├── evaluate.py                # Validation
