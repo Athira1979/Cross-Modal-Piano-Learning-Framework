@@ -103,15 +103,19 @@ python demo.py sim --duration 60
  
 ## 🏗️ Architecture Overview
 ```
-Audio (Wavelet+MFCC)
-         │
-Gesture   → FDMMA (TCN+ATFM) 
-         │
-Posture   → STABlock (PASA+PATA) 
-         │
-         ↓ CrossModal Fusion (CMTPF)
-         │
-          → Feedback (RF-Net)  → [Beginner/Intermediate/Advanced]
+                       Data Collection
+                              ↓
+                      Data Preprocessing
+                              ↓
+                      Feature Extraction
+[AWavelet-MFCC-TD (Audio) + FDMMA (Gesture) + STAT (Posture)]
+                              ↓
+                 Cross-Modal & Fusion (CMTPF)
+                              ↓
+                      RFP-Net (Feedback)
+                              ↓
+                 Personalized Feedback Output
+               [Beginner/Intermediate/Advanced]
 ```
 ## 🗂️ File Structure
 ```
