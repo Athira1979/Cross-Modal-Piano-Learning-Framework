@@ -37,12 +37,28 @@ python demo.py web --share
 python demo.py sim --duration 60
 ```
 ## 📊 Performance
-```
-
-```
+ 
+<table style="width:100%">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+ 
 ## 🏗️ Architecture Overview
 ```
-Audio (Wavelet+MFCC)  → AudioEncoder 
+Audio (Wavelet+MFCC)
          │
 Gesture   → FDMMA (TCN+ATFM) 
          │
@@ -50,29 +66,37 @@ Posture   → STABlock (PASA+PATA)
          │
          ↓ CrossModal Fusion (CMTPF)
          │
-          → Classifier  → [Beginner/Intermediate/Advanced]
+          → Feedback (RF-Net)  → [Beginner/Intermediate/Advanced]
 ```
 ## 🗂️ File Structure
 ```
-dataset/
-├── participant1/
-│   └── session1/
-│       ├── audio.npy      # Raw audio (16000Hz)
-│       ├── gesture.npy    # (T, J, C) or (T, features)
-│       ├── posture.npy    # (T, J, C) or (T, features)
-│       └── meta.json      # {"skill_level": "beginner|intermediate|advanced"}
- 
-piano-ai/
-├── 🎹 demo.py              # Live/Web demos
-├── 📊 generate_dataset.py  # Synthetic data
-├── 🏋️  train.py           # Training script
-├── 📈 metrics.py          # Evaluation
-├── data/dataset_loader.py # PyTorch Dataset
-├── model.py              # PianoAI Model
-├── config.py             # Hyperparams
-├── dataset/              # Generated data
-├── checkpoints/          # Trained models
-└── docs/                 # Screenshots
+Cross-Modal-Piano-Learning-Framework/
+├── checkpoints/               # Trained models
+├── data/dataset_loader.py     # PyTorch Dataset loader
+├── dataset/
+│   ├── audio/audio.wav        # Raw audio (16000Hz)
+│   ├── gesture/gesture.npy    # Gesture features
+│   ├── posture/posture.npy    # Posture features
+│   └── metadata.csv           # Generated data
+├── models/
+│   ├── awavelet_mfcc_td.py    # AWavelet_MFCC_TD
+│   ├── cmtpf.py               # CMTPF
+│   ├── fdmma.py               # FDMMA
+│   ├── rfp_net.py             # RFP-Net
+│   └── stat.py                # STAT
+├── utils/
+│   ├── metrics.py             # Evaluation
+│   └── plot_metrics.py        # Visualization
+├── LICENSE                    # LICENSE
+├── README.MD                  # Readme file
+├── config.py                  # Hyperparams 
+├── demo.py                    # Live/Web demos
+├── evaluate.py                # Validation
+├── generate_dataset.py        # Synthetic data
+├── inference.py               # Inference
+├── main.py                    # PianoAI Model 
+├── requirements.txt           # Requirements
+└── train.py                   # Training script 
  ```
 ## 🔧 Requirements
 ```
