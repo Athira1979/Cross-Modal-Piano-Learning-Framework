@@ -40,19 +40,64 @@ python demo.py sim --duration 60
  
 <table style="width:100%">
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Modality</th>
+    <th colspan="5">Common metric</th>
+    <th colspan="3">Special additional metric</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td> </td>
+    <td>Accuracy (%)</td>
+    <td>Precision (%)</td>
+    <td>Recall (%)</td>
+    <td>Specificity (%)</td>
+    <td>F1-Score (%)</td>
+    <td>PE (cents)</td>
+    <td>JPE (mm)</td>
+    <td>JAE (°)</td>
+  </tr>
+  <tr> 
+    <td>Audio</td>
+    <td>88.92</td>
+    <td>87.69</td>
+    <td>85.90</td>
+    <td>84.99</td>
+    <td>86.78</td>
+    <td>12.3</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>    
+    <td>Gesture</td>
+    <td>86.29</td>
+    <td>86.79</td>
+    <td>86.12</td>
+    <td>86.29</td>
+    <td>86.45</td>
+    <td>-</td>
+    <td>15.7</td>
+    <td>-</td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+    <td>Posture</td>
+    <td>89.90</td>
+    <td>86.92</td>
+    <td>89.56</td>
+    <td>88.87</td>
+    <td>88.22</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4.8</td>
+  </tr>
+  <tr>    
+    <td>Fused model (proposed)</td>
+    <td>98.58</td>
+    <td>97.76</td>
+    <td>97.12</td>
+    <td>97.10</td>
+    <td>97.43</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
   </tr>
 </table>
  
