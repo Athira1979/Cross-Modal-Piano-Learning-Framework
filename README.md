@@ -14,7 +14,7 @@ In this paper, the aim is to implement a method for enhancing piano skill develo
 
 These contributions enhance piano skill development.
  
-##🚀 Quick Start
+## 🚀 Quick Start
 
 ### 1. Clone & Install
 
@@ -128,6 +128,6 @@ python metrics.py --predictions predictions.csv --plot
 ```
 
 ## 📄 License
+<a href='https://raw.githubusercontent.com/Athira1979/Cross-Modal-Piano-Learning-Framework/refs/heads/main/LICENSE'>MIT License</a>
 
-MIT License
 [![MIT License](https://raw.githubusercontent.com/Athira1979/Cross-Modal-Piano-Learning-Framework/refs/heads/main/LICENSE) - Free for commercial use!
